@@ -1,0 +1,174 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 14px;
+}
+
+.container {
+  background-color: #f9f4e8;
+  padding: 25px 50px;
+  min-height: 100vmin;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toogle{
+    display: none;
+}
+.links > ul > li {
+  display: inline;
+  padding: 5px;
+  font-family: "lato","Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.logo {
+  font-family: serif;
+  font-weight: 900;
+}
+.logo > a > h2{
+    font-size: 22px;
+}
+a {
+  text-decoration: none;
+  color: rgb(43, 40, 40);
+}
+.contact {
+  background-color: blue;
+  padding: 15px;
+  border-radius: 5px;
+}
+.contact > a {
+  color: white;
+  font-family: "lato","Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  height: 60vh;
+}
+.grid-item-1 > h1 {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+}
+.grid-item-1 > p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-family: "lato","Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(56, 53, 53);
+}
+.grid-item-1 > form {
+  margin-top: 20px;
+}
+.grid-item-1 > form > input {
+  all: unset;
+  width: 60%;
+  height: 50px;
+  background-color: white;
+  border-radius: 5px;
+  font-family: "lato","Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding-left: 20px;
+  font-weight: 400;
+}
+.grid-item-1 > form > button {
+  all: unset;
+  background-color: blue;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  font-family: "lato","Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.grid-item-1 > form > button:hover,
+.contact:hover {
+ background-color: rgb(28, 165, 28);
+}
+.grid-item-2 {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.firstimg {
+  transform: rotate(-39deg);
+}
+.secondimg {
+  transform: rotate(-26deg);
+}
+.thirdimg {
+  transform: rotate(-13deg);
+}
+.center {
+  position: absolute;
+  width: 334px;
+  height: 388px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+footer > ul > li {
+  display: inline;
+  font-family: "lato","Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 5px;
+}
+
+@media (max-width: 930px) {
+  .grid-container {
+    grid-template-columns: unset;
+    grid-template-rows: 0.6fr 1fr;
+    margin-top: 50px;
+    height: 900px;
+  }
+  .grid-item-1{
+      grid-area: 2/1;
+      position: relative;
+  }
+  .center {
+    width: 284px;
+    height: 328px;
+  }
+  /* .grid-item-1 > h1 {
+    font-size: 35px;
+  } */
+  .container{
+      padding: 15px 35px;
+  }
+  .links, .contact{
+    display: none;
+  }
+  .toogle{
+    display: block;
+}
+}
+@media (max-width: 450px) {
+    .center {
+        width: 224px;
+        height: 258px;
+      }
+      .grid-item-1 > form > input {
+        width: 92%;}
+        .grid-item-1 > form > button {
+            width: 90%;
+            margin-top: 10px;
+            text-align: center;
+        }
+        /* .grid-item-1 > h1 {
+            font-size: 40px;
+          } */
+          .container{
+            padding: 15px 25px;
+        }
+        footer {
+            justify-content: left;}
+
+}
